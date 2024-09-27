@@ -21,7 +21,7 @@ class TestTaskLambdaHandlers(unittest.TestCase):
     table_name = "TasksTable"
 
     def setUp(self):
-        dynamodb = boto3.resource('dynamodb', region_name='us-west-2')
+        dynamodb = boto3.resource('dynamodb')
 
         dynamodb.create_table(
             TableName=self.table_name,
