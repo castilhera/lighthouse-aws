@@ -62,3 +62,11 @@ Now you are ready to deploy to AWS, using the command:
 ```
 $ cdk deploy
 ```
+
+## Test
+
+If you want to test using Postman, in `tests` folder, there is a json file named `postman_collection.json`.
+
+Open Postman, import this file an replace the variables:
+* `base_url`  your AWS url e.g. https://aws ....
+* `task_id`  after creating a task, use the returned id to test the other endpoints.
