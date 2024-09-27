@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "60678693-a49c-4589-9e60-28985159f56b",
+		"name": "TasksApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13877623"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Task 1\",\r\n    \"description\": \"This is task 1\",\r\n    \"status\": \"pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/tasks",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/tasks/{{task_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"tasks",
+						"{{task_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Updated Task 1\",\r\n    \"description\": \"This task has been updated\",\r\n    \"status\": \"completed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/tasks/{{task_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"tasks",
+						"{{task_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/tasks/{{task_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"tasks",
+						"{{task_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "[AWS_URL]",
+			"type": "default"
+		},
+		{
+			"key": "task_id",
+			"value": "0",
+			"type": "string"
+		}
+	]
+}
